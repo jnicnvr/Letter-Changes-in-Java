@@ -1,0 +1,57 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+    
+    public static char[] jako() //rename mo ining methods na ini itong arog kaito sa criteria
+    {
+        Scanner sc = new Scanner(System.in);
+	    String str = sc.nextLine();
+	    // String str = "GeeksFor1!";
+	    
+        char[] ch = new char[str.length()]; //si str.. iyo ito si string na nainput tapos ilalaog sya sa character array
+
+        for (int i = 0; i < str.length(); i++) //ini loloop si character array saro saro hanggang mag abot duman sa length nya
+        { 
+            if( str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' )
+            {
+                
+                ch[i] = Character.toUpperCase(str.charAt(i)); //so nagkakapital
+            }
+            else
+            {
+                 ch[i] = str.charAt(i); //default lang mayong changes
+            }
+        }
+      return ch;
+    }
+    
+    
+	public static void main(String[] args) {
+       char ch[] = jako(); //igidi nangyayadi sa methods na ini ang maguppercase ning vowels saka pagsplit
+
+        for (char c : ch) {
+            
+              if(Character.isDigit(c)) //kapag number dati lang so Character
+              {
+                System.out.print(c);
+              }
+              else if(!Character.isLetter(c) && !Character.isDigit(c)) //kapag dae number at letter dati lang so Character
+              {
+                System.out.print(c);
+              }
+              else
+              {
+                c++; //uya si nag iincrement ni Character  a->b
+                System.out.print(c);
+               }
+                          
+        }
+	}
+}
