@@ -10,7 +10,9 @@ Then capitalize every vowel in this new string(a, e, i, o, u) and finally return
 EXAMPLES
 
 Input: "hello*3"
+
 Output: lfmmp*3
 
 Input: "fun times!"
+
 Output: gvO Ujnft!
