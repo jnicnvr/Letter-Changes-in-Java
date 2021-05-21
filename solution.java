@@ -9,24 +9,24 @@ import java.util.*;
 public class Main
 {
     
-    public static char[] jako() //rename mo ining methods na ini itong arog kaito sa criteria
+    public static char[] splitStringsMethod() 
     {
         Scanner sc = new Scanner(System.in);
 	    String str = sc.nextLine();
 	    // String str = "GeeksFor1!";
 	    
-        char[] ch = new char[str.length()]; //si str.. iyo ito si string na nainput tapos ilalaog sya sa character array
+        char[] ch = new char[str.length()]; 
 
-        for (int i = 0; i < str.length(); i++) //ini loloop si character array saro saro hanggang mag abot duman sa length nya
+        for (int i = 0; i < str.length(); i++)
         { 
             if( str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' )
             {
                 
-                ch[i] = Character.toUpperCase(str.charAt(i)); //so nagkakapital
+                ch[i] = Character.toUpperCase(str.charAt(i));
             }
             else
             {
-                 ch[i] = str.charAt(i); //default lang mayong changes
+                 ch[i] = str.charAt(i);
             }
         }
       return ch;
@@ -34,21 +34,21 @@ public class Main
     
     
 	public static void main(String[] args) {
-       char ch[] = jako(); //igidi nangyayadi sa methods na ini ang maguppercase ning vowels saka pagsplit
+       char ch[] = splitStringsMethod(); 
 
         for (char c : ch) {
             
-              if(Character.isDigit(c)) //kapag number dati lang so Character
+              if(Character.isDigit(c)) 
               {
                 System.out.print(c);
               }
-              else if(!Character.isLetter(c) && !Character.isDigit(c)) //kapag dae number at letter dati lang so Character
+              else if(!Character.isLetter(c) && !Character.isDigit(c)) 
               {
                 System.out.print(c);
               }
               else
               {
-                c++; //uya si nag iincrement ni Character  a->b
+                c++; 
                 System.out.print(c);
                }
                           
